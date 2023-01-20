@@ -30,3 +30,7 @@ app.post('/api/notes', (req, res) => {
     fs.writeFileSync('./db/db.json', JSON.stringify(notes))
     res.json(notes)
 });
+
+app.listen(PORT, () =>
+console.log(`View live port at http://localhost:${PORT}`)
+);
